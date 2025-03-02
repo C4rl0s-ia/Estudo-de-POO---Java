@@ -1,13 +1,16 @@
 //Necessário para poder manter organizado no packege classes
 package classes;
+//importando a interface da caneta
+import interfaces.ControladorCaneta;
 
-public class Caneta {
+
+public class Caneta implements ControladorCaneta {
 
     //Atributos da classe Caneta. Cada tributo precisa possuir um metodo get e um metodo set para cada um deles.
-    public String modelo;
-    public String cor;
+    private String modelo;
+    private String cor;
     private double ponta;
-    protected int carga;
+    private int carga;
     private boolean tampada;
 
 
@@ -21,7 +24,6 @@ public class Caneta {
 
     //Metodos de ação
     public void status() {
-
         //this. serve para referência ao objeto que fez a chamada a classe, isso indica direto qual o objeto ao qual fez a chamada ao metodo.
         System.out.println("O modelo da sua caneta é: " + this.getModelo());
         System.out.println("A cor da sua caneta é: " + this.getCor());
@@ -30,16 +32,38 @@ public class Caneta {
         System.out.println("Sua caneta está com a tampa: " + this.getTampada());
     }
 
-    protected void tampar() {
+    @Override
+    public void rabiscar(){
+        if (this.getTampada()) {
+            System.out.println("A caneta está tampada, portanto não pode rabiscar.");
+            return;
+        }
+
+        System.out.println("Rabisco feito com a caneta");
+    }
+
+    @Override
+    public void tampar() {
+        if (this.getTampada()){
+            System.out.println("Caneta já está tampada");
+            return;
+        }
+
         this.setTampada(true);
+        System.out.println("Caneta tampada");
+
     }
 
-    protected void destampar() {
-        this.tampada = false;
+    @Override
+    public void destampar() {
+        if (!this.getTampada()){
+            System.out.println("Caneta já está destampada");
+            return;
+        }
+
+        this.setTampada(false);
+        System.out.println("Caneta destampada");
     }
-
-
-
 
 
     //Metodos especiais de setters e getters:

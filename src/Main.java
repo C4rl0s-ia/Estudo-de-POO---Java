@@ -7,23 +7,29 @@ public class Main {
 
         //Objeto Caneta
 
-//        System.out.println("Caneta 1 criada!");
-//        Caneta c1 = new Caneta(
-//                "Pantel",
-//                "Preta",
-//                0.5,
-//                100
-//        );
-//        c1.status();
-//        System.out.println(" ");
-//        System.out.println("Caneta 2 criada!");
-//        Caneta c2 = new Caneta(
-//                "Bic Cristal",
-//                "Amarela",
-//                0.8,
-//                75
-//        );
-//        c2.status();
+        System.out.println("Caneta 1 criada!");
+        Caneta c1 = new Caneta(
+                "Pantel",
+                "Preta",
+                0.5,
+                100
+        );
+        c1.status();
+        c1.destampar();
+        c1.rabiscar();
+        c1.tampar();
+        c1.rabiscar();
+        c1.status();
+
+        System.out.println(" ");
+        System.out.println("Caneta 2 criada!");
+        Caneta c2 = new Caneta(
+                "Bic Cristal",
+                "Amarela",
+                0.8,
+                75
+        );
+        c2.status();
 
         //Objeto Estilo (abstrato)
 
@@ -85,28 +91,28 @@ public class Main {
         //Estudo de encapsulamento
         //Vamos atuar na criação de uma “interface” controlador, uma classe controle e um objeto.
 
-        Controle controle1 = new Controle(
-
-        );
-        controle1.ligar();
-        System.out.println("--------------------------");
-        controle1.abrirMenu();
-        System.out.println("--------------------------");
-        controle1.fecharMenu();
-        System.out.println("--------------------------");
-        controle1.play();
-        System.out.println("--------------------------");
-        controle1.maisVolume();
-        System.out.println("--------------------------");
-        controle1.menosVolume();
-        System.out.println("--------------------------");
-        controle1.pause();
-        System.out.println("--------------------------");
-        controle1.abrirMenu();
-        System.out.println("--------------------------");
-        controle1.fecharMenu();
-        System.out.println("--------------------------");
-        controle1.desligar();
+//        Controle controle1 = new Controle(
+//
+//        );
+//        controle1.ligar();
+//        System.out.println("--------------------------");
+//        controle1.abrirMenu();
+//        System.out.println("--------------------------");
+//        controle1.fecharMenu();
+//        System.out.println("--------------------------");
+//        controle1.play();
+//        System.out.println("--------------------------");
+//        controle1.maisVolume();
+//        System.out.println("--------------------------");
+//        controle1.menosVolume();
+//        System.out.println("--------------------------");
+//        controle1.pause();
+//        System.out.println("--------------------------");
+//        controle1.abrirMenu();
+//        System.out.println("--------------------------");
+//        controle1.fecharMenu();
+//        System.out.println("--------------------------");
+//        controle1.desligar();
     }
 
 }

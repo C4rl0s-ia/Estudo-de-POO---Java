@@ -1,6 +1,5 @@
 package classes;
 import interfaces.Controlador;
-
 import java.util.Scanner;
 
 //Estudando encapsulamento

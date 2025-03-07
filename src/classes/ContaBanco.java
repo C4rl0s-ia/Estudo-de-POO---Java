@@ -6,34 +6,34 @@ public class ContaBanco {
     public int numConta;
     protected String tipoConta; //Conta-corrente (CC) ou Conta Poupança (CP)
     private boolean status; //Conta aberta = true conta fechada = false
-    private String nomeDono;
+    private String titular;
     private double saldo;
 
     //Instanciando um número aleatório para o numConta no ato da criação.
     //private static final Random randomNumber = new Random();
     public ContaBanco() {
-        this.status = false;
-        this.saldo = 0;
+        this.setStatus(false);
+        this.setSaldo(0);
         //Sempre que o objeto conta for criada, será passada as informações atuais do objeto conta criada.
     }
 
     public void estadoAtual() {
         System.out.println("Número: " + this.getNumConta());
         System.out.println("Tipo: " + this.getTipoConta());
-        System.out.println("Nome: " + this.getNomeDono());
+        System.out.println("Nome: " + this.getTitular());
         System.out.println("Saldo: R$" + this.getSaldo());
         System.out.println("Status: " + this.isStatus());
         System.out.println("------------------------------");
     }
 
-    public void abrirConta(String nomeDono, String tipoConta) {
+    public void abrirConta(String titular, String tipoConta) {
         //Verifica se o status é true
         if (isStatus()) {
             System.out.println("A conta já está aberta!");
             return;
         }
 
-        this.setNomeDono(nomeDono);
+        this.setTitular(titular);
         this.setTipo(tipoConta);
 
         if (tipoConta.equalsIgnoreCase("cc")) {
@@ -128,7 +128,7 @@ public class ContaBanco {
             System.out.println("------------------------------");
         }
 
-        if (this.tipoConta.equalsIgnoreCase("cc")) {
+        if (this.getTipoConta().equalsIgnoreCase("cc")) {
             this.setSaldo(this.getSaldo() - 12);
             System.out.println("------------------------------");
             System.out.println("Taxa de manutenção. Saiu um total de: R$ 12,00");
@@ -136,7 +136,7 @@ public class ContaBanco {
             System.out.println("------------------------------");
         }
 
-        if (this.tipoConta.equalsIgnoreCase("cp")) {
+        if (this.getTipoConta().equalsIgnoreCase("cp")) {
             this.setSaldo(this.getSaldo() - 20);
             System.out.println("------------------------------");
             System.out.println("Taxa de manutenção. Saiu um total de: R$ 20,00");
@@ -171,12 +171,12 @@ public class ContaBanco {
         this.status = status;
     }
 
-    public String getNomeDono() {
-        return nomeDono;
+    public String getTitular() {
+        return titular;
     }
 
-    public void setNomeDono(String nomeDone) {
-        this.nomeDono = nomeDone;
+    public void setTitular(String titular) {
+        this.titular = titular;
     }
 
     public double getSaldo() {

@@ -1,4 +1,6 @@
 package classes;
+import utilidades.CoresTerminal;
+
 import java.util.Random;
 
 public class Luta {
@@ -7,18 +9,25 @@ public class Luta {
     private Lutador desafiante;
     private int rodada;
     private boolean aprovada;
+    Random random = new Random();
 
-    //Métodos
+    //Métodos Públicos
     public void marcarLuta (Lutador l1, Lutador l2) {
         //Usando o equals para fazer uma igualdade entre os valores apresentados na memória.
         if (l1.getCategoria().equals(l2.getCategoria()) && l1 != l2  ) {
-            this.isAprovada(true);
+            this.setAprovada(true);
             this.setDesafiante(l1);
             this.setDesafiado(l2);
-            System.out.println("Luta Marcada com sucesso entre o lutador " + l1.getNome() + " e o lutador " + l2.getNome() + " para 07/03/2025 às 03h da manhã.");
+            System.out.println(CoresTerminal.VERDE + "Luta Marcada com sucesso entre o lutador " + l1.getNome() + " e o lutador " + l2.getNome() + CoresTerminal.RESET);
         } else {
-            System.out.println("Luta não pode ser marcada");
-            this.isAprovada(false);
+            if (!l1.getCategoria().equals(l2.getCategoria())) {
+                System.out.println(CoresTerminal.VERMELHO + "Luta não pode ser marcada, pois os lutadores são de categorias diferentes" + CoresTerminal.RESET);
+            } else if (l1 == l2) {
+                System.out.println(CoresTerminal.VERMELHO + "Luta não pode ser marcada, pois os lutadores são iguais" + CoresTerminal.RESET);
+            } else {
+                System.out.println(CoresTerminal.VERMELHO + "Luta não pode ser marcada." + CoresTerminal.RESET);
+            }
+            this.setAprovada(false);
             this.setDesafiante(null);
             this.setDesafiado(null);
         }
@@ -26,37 +35,49 @@ public class Luta {
 
     public void lutar(){
         if (this.isAprovada()) {
-
-            desafiante.apresentar();
+            System.out.println(CoresTerminal.ROXO + "Apresento a vocês o desafiante dessa noite!" + CoresTerminal.RESET);
+            this.desafiante.status();
             System.out.println("-------------------");
-            desafiado.apresentar();
-            //Define os valores de 0 a 2 com 0 = empate, 1 = desafiante ganha e 2 desafiado ganha.
-            Random random = new Random();
-            int vencedor = random.nextInt(3);
+            System.out.println(CoresTerminal.ROXO + "Ele desafiou o lutador: " + CoresTerminal.RESET);
+            this.desafiado.status();
+            System.out.println("-------------------");
 
-            switch (vencedor) {
-                case 0 :
-                    System.out.println("A luta foi um empate.");
-                    desafiante.empatarLuta();
-                    desafiado.empatarLuta();
-                    break;
-                case 1 :
-                    System.out.println("O desafiante " + desafiante.getNome() + " ganhou a luta");
-                    desafiante.ganharLuta();
-                    desafiado.perderLuta();
-                    break;
-                case 2 :
-                    System.out.println("O desafiado " + desafiado.getNome() + " ganhou a luta");
-                    desafiado.ganharLuta();
-                    desafiante.perderLuta();
-                    break;
+            //Calculando a força dos lutadores (a um fator aleatório que define momento da luta)
+            int forcaDesafiante = desafiante.calcularForca() + random.nextInt(25);
+            int forcaDesafiado = desafiado.calcularForca() + random.nextInt(25);
+
+            // Adicionar fator aleatório (debilitar (dano) ao lutador)
+            int sofreuDanoDesafiante = random.nextInt(25); // Acrescenta pontos aleatórios ao valor da força do lutador
+            int sofreuDanoDesafiado  = random.nextInt(25);
+
+            int chanceDesafiante = forcaDesafiante - sofreuDanoDesafiante;
+            int chanceDesafiado  = forcaDesafiado - sofreuDanoDesafiado;
+
+            System.out.println(CoresTerminal.cor256(208) + "--- RESULTADO ---" + CoresTerminal.RESET);
+
+            System.out.println(CoresTerminal.AMARELO + "Lutador 1: " + CoresTerminal.RESET + CoresTerminal.AZUL + desafiante.getNome() + CoresTerminal.RESET + CoresTerminal.AMARELO +  " - Força: " + CoresTerminal.RESET + CoresTerminal.AZUL + chanceDesafiante + CoresTerminal.RESET);
+            System.out.println(CoresTerminal.AMARELO + "Lutador 2: " + CoresTerminal.RESET + CoresTerminal.AZUL + desafiado.getNome() + CoresTerminal.RESET + CoresTerminal.AMARELO + " - Força: " + CoresTerminal.RESET + CoresTerminal.AZUL + chanceDesafiado + CoresTerminal.RESET);
+
+
+            if (chanceDesafiante > chanceDesafiado) {
+                System.out.println(CoresTerminal.ROXO + "🏆 Vencedor: " + CoresTerminal.RESET + CoresTerminal.AZUL + desafiante.getNome() + CoresTerminal.RESET);
+                desafiante.ganharLuta();
+                desafiado.perderLuta();
+            } else if (chanceDesafiado > chanceDesafiante) {
+                System.out.println(CoresTerminal.ROXO + "🏆 Vencedor: " + CoresTerminal.RESET + CoresTerminal.AZUL + desafiado.getNome() + CoresTerminal.RESET);
+                desafiado.ganharLuta();
+                desafiante.perderLuta();
+            } else {
+                System.out.println(CoresTerminal.ROXO + "🤝 Empate! A luta foi equilibrada!" + CoresTerminal.RESET);
+                desafiante.empatarLuta();
+                desafiado.empatarLuta();
             }
-
         } else {
-            System.out.println("A luta não pode acontecer.");
+            System.out.println(CoresTerminal.VERMELHO + "A luta não pode acontecer." + CoresTerminal.RESET);
         }
 
     }
+
 
     //Métodos especiais
     public Lutador getDesafiado() {
@@ -83,10 +104,6 @@ public class Luta {
         this.rodada = rodada;
     }
 
-    public void isAprovada(boolean b) {
-        this.aprovada = b;
-    }
-
     public boolean isAprovada(){
         return aprovada;
     }
@@ -94,4 +111,7 @@ public class Luta {
     public void setAprovada(boolean aprovada) {
         this.aprovada = aprovada;
     }
+
+
+
 }

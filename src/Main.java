@@ -1,10 +1,10 @@
 import java.util.Scanner;
 import classes.*;
+import utilidades.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner dadosEntrada = new Scanner(System.in);
-
         //Iniciando o estudo de relacionamento entre classes.
         //Vetor para instâncias as classes e guarda-las em um array.
         System.out.println("---------------------------------");
@@ -24,21 +24,12 @@ public class Main {
 
         //Para criar uma luta, só instância a classe luta que se relaciona por agregação a classe lutador;
         System.out.println("---------------------------------");
-        System.out.println("Iniciando uma luta.");
+        System.out.println(CoresTerminal.VERDE + "Iniciando uma luta." + CoresTerminal.RESET);
         System.out.println("---------------------------------");
         Luta UEC01 = new Luta();
         UEC01.marcarLuta(l[0], l[1]);
         System.out.println("---------------------------------");
-        System.out.println("---------------------------------");
         UEC01.lutar();
-
-
-
-
-
-
-
-
 
 
 

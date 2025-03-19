@@ -1,4 +1,4 @@
-package classes;
+package classes.estilo;
 public class Estilo {
     public String roupa;
     public String marca;

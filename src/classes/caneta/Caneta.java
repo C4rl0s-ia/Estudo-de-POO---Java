@@ -1,5 +1,5 @@
 //Necessário para poder manter organizado no packege classes
-package classes;
+package classes.caneta;
 //importando a interface da caneta
 import interfaces.ControladorCaneta;
 

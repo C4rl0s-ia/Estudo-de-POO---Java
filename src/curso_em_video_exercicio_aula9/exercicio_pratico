@@ -1,0 +1,37 @@
+Construa uma classe chamada Pessoa que tenha os seguintes argumentos:
+
+            Pessoa
+      --------------------
+            - nome
+            - idade
+            - sexo
+      --------------------
+      + fazerAniversario()
+      --------------------
+
+Além disso, construa uma segunda classe que irá receber a classe Pessoa
+como um tipo abstrato de dado:
+
+             Livro
+      ----------------------
+        - autor : String
+        - titulo : String
+        - totPaginas : Int
+        - pagAtual : int
+        - aberto : boolean
+        - leitor : Lutador
+      ----------------------
+            + detalhes()
+      ----------------------
+
+A classe Livro, irá ter uma interface que terá os seguintes métodos:
+
+             Livro
+      ----------------------
+      ----------------------
+            + abrir()
+            + fechar()
+            + folhear()
+            + avancarPag()
+            + voltarPag()
+      ----------------------

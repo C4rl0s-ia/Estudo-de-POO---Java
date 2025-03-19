@@ -1,4 +1,4 @@
-package classes;
+package classes.lutaLutador;
 import utilidades.CoresTerminal;
 
 import java.util.Random;

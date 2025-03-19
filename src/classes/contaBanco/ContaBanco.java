@@ -1,5 +1,4 @@
-package classes;
-import java.util.Random;
+package classes.contaBanco;
 
 public class ContaBanco {
 

@@ -1,5 +1,5 @@
-package classes;
-import java.util.ArrayList;
+package classes.song;
+
 public class Song {
 
     String nome;

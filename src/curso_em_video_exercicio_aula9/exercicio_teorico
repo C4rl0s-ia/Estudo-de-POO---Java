@@ -183,9 +183,17 @@ B: Polimorfismo
 C: Herança
 D: Abstração
 
-Resposta: D
+Resposta: D - Correto
 ---------------------------------------------------------------------
+(CAP-PD 2009 - 14) Com relação aos conceitos de POO, assinale a opção
+Incorreta
 
+A: Classes são tipos abstrados de dados
+B: Objetos são instâncias de uma classe
+C: Subclasse é uma classe definida por meio de outra classe
+D: Atributos são subprogramas que definem as operações em objetos de
+uma classe
 
-
-
+Resposta: D - Correto
+---------------------------------------------------------------------
+Total de acertos: 14 de 15.

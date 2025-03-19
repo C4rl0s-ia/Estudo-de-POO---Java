@@ -1,4 +1,4 @@
-package curso_em_video_exercicio_aula9;
+package classes.livroPessoa;
 
 public class Pessoa {
     private String nome;

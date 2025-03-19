@@ -1,4 +1,4 @@
-package classes;
+package classes.controle;
 import interfaces.Controlador;
 import java.util.Scanner;
 

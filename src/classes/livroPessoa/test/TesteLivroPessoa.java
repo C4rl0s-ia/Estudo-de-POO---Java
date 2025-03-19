@@ -1,4 +1,7 @@
-package curso_em_video_exercicio_aula9;// Classe de Teste Manual - TesteLivroPessoa.java
+package classes.livroPessoa.test;// Classe de Teste Manual - TesteLivroPessoa.java
+
+import classes.livroPessoa.Livro;
+import classes.livroPessoa.Pessoa;
 
 public class TesteLivroPessoa {
     public static void main(String[] args) {

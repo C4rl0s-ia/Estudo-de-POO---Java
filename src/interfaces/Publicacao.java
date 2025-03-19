@@ -1,4 +1,6 @@
-package curso_em_video_exercicio_aula9;
+package interfaces;
+
+import classes.livroPessoa.Pessoa;
 
 public interface Publicacao {
     public abstract void acessarLivro(Pessoa leitor);

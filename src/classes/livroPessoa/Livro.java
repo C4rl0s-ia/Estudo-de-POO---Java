@@ -1,5 +1,5 @@
-package curso_em_video_exercicio_aula9;
-
+package classes.livroPessoa;
+import interfaces.Publicacao;
 import utilidades.CoresTerminal;
 
 public class Livro implements Publicacao {

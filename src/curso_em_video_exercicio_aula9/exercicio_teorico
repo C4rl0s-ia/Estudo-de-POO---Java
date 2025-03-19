@@ -1,0 +1,191 @@
+(CAP-PD 2006 - 1) Uma casa está para uma planta
+arquitetónica assim como um objet o está para:
+
+A: Um método
+B: Uma propriedade
+C: Uma Classe
+D: Um atributo
+
+Resposta: C - Correto
+------------------------------------------------------
+(EAGS 2015 - 2) A programação orientada a objetos se
+preocupa em produzir software que tenha as seguintes
+características:
+
+A: Natural, Confiável, Reutilizável, Manutenível,
+extensível e oportuno.
+B: Natural, Mensurável, manutenível, instantâneo,
+acessível e confiável.
+C: Confiável, Reutilizável, Extensível, mensurável,
+acessível e fácil de usar.
+D: Extensível Natural, Mensurável, reutilizável,
+instantâneo e simples
+
+Resposta: A - Correto
+Dica: COMERN
+-------------------------------------------------------
+(EAGS 2009 - 3) Assinale a alternativa incorreta com
+relação ao conceito de classe e objeto em programação
+Orientada a objetos:
+
+A: Uma classe é instância de um objeto
+B: Um objeto é uma construção de software que encapsula
+estado e comportamento
+C: Uma classe define os atributos e comportamentos
+compartilhados por um tipo de objeto
+D: Em uma linguagem POO pura, tudo é um objeto, desde os
+tipos mais básicos
+
+Resposta: A - Correto
+---------------------------------------------------------
+(EAGS 2012 - 4) Correlacione a coluna da esquerda com a da
+direita e assinale a alternativa que contém a sequência
+correta:
+
+1 - Atributo        (3) Ação feita por um objeto
+
+2 - Classe          (2) Define os atributos e
+                     comportamentos comuns
+3 - Comportamento   (1) Característica de uma classe
+                     que é visível
+4 - Domínio         (5)Construção de software que encapsula
+                     estado e comportamento
+5 - Objeto          (4) Espaço onde o problema reside
+
+A: 3 2 4 5 1
+B: 3 2 1 5 4
+C: 2 3 1 5 4
+D: 2 4 3 1 5
+
+Resposta: B - Correto
+-----------------------------------------------------------
+(EAGS 2009 - 5) Assinale a alternativa incorreta sobre a
+definição de termos usados em POO:
+
+A: Uma variável interna é um valor mantido dentro do objeto
+B: Atributos são as características de uma classe visíveis
+externamente
+C: Comportamento são as características de uma classe
+invisíveis externamente
+D: O estado de um objeto é o significado combinado das
+variáveis internas do objeto
+
+Resposta: C- Correto
+-----------------------------------------------------------
+(EAGS 2013 - 6) - Associe as colunas a seguir marque a opção
+que contém a sequência correta:
+
+1 - Construtor  (2) Métodos que dão acesso aos dados internos
+
+2 - Acessor     (4) Define as diferentes espécies de valores que
+                 podem ser usados
+3 - Mutante     (3) Métodos que permitem que se altere o estado
+                 de um objeto
+4 - Tipos       (1) Métodos usados para inicializar objetos
+                 durante a instanciação
+A: 1 2 3 4
+B: 2 4 1 3
+C: 2 4 3 1
+D: 4 2 3 1
+
+Resposta: C - Correto
+-----------------------------------------------------------
+(EAGS 2014 - 7) Quais são os três pilares da Programação Orientada a
+Objetos
+
+A: Herança, Polimorfismo e instância
+B: Herança, Polimorfismo e Metodologia
+C: Encapsulamento, Herança e Polimorfismo
+D: Encapsulamento, Polimorfismo e Metodologia
+
+Resposta: C - Correto
+------------------------------------------------------------
+(EAGS 2013 - 8) - Associe as colunas a seguir marque a opção
+que contém a sequência correta:
+
+1 - Classe       (2) Define o que uma entidade pode fazer com
+                    o objeto
+2 - Interface    (4) Instanciação de uma classe
+
+3 - Construtor   (1) Define os atributos e comportamentos
+                    compartilhados
+4 - Objeto       (3) Utilizado para inicializar objetos
+
+A: 1 2 4 3
+B: 1 4 2 3
+C: 2 3 1 4
+D: 2 4 1 3
+
+Resposta: D - Correto
+------------------------------------------------------------
+(EAGS 2010  - 9) - A maioria das linguagens orientadas a objetos
+suporta quais níveis de acesso
+
+A: Secreto, público e primário
+B: Público, protegido e privado
+C: Público, protegido e primário
+D: Público, privado e secundário
+
+Resposta: B - Correto
+------------------------------------------------------------
+(EAGS 2011  - 10) - No contexto dos níveis de acesso, selecione
+a alternativa que contém o nível que apenas garante o acesso para
+aquele objeto e suas subclasses:
+
+A: Público
+B: Protegido
+C: Privado
+D: Oculto
+
+Resposta: B - Correto
+-------------------------------------------------------------------
+(CAP-PD 2009 - 11) A proteção de atributos e operações das classes,
+fazendo com que estas se comuniquem com o meio externo por meio de
+suas interfaces, define o conceito de:
+
+A: Polimorfismo
+B: Encapsulamento
+C: Herança
+D: Agregação
+
+Resposta: B - Correto
+-------------------------------------------------------------------
+(CAP-PD 2009 - 12) Quando se utiliza o conceito de encapsulamento
+da POO, enquanto a _________ define os detalhes internos do
+componente, a ______________ lista os serviços fornecidos por ele
+
+A: Interface - implementação
+B: Classe - implementação
+C: Interface - Classe
+D: Implementação - interface
+
+Resposta: D | enquanto a implementação define os detalhes (linhas dos
+componentes)
+-------------------------------------------------------------------
+(EAGS 2011  - 13) - ________ é a característica da POO que permite
+separar o programa em várias partes menores e independentes. Cada
+parte possuí sua implementação de forma autônoma. Com essa
+Característica é possível ocultar os detalhes internos de cada parte
+através de uma interface.
+
+A: Herança
+B: Hierarquia
+C: Polimorfismo
+D: Encapsulamento
+
+Resposta: D - Correto
+---------------------------------------------------------------------
+(CAP-PD 2009 - 14) Qual é o conceito de POO que significar representar
+uma entidade, incluindo apenas seus atributos mais relevantes?
+
+A: Encapsulamento
+B: Polimorfismo
+C: Herança
+D: Abstração
+
+Resposta: D
+---------------------------------------------------------------------
+
+
+
+

@@ -119,27 +119,7 @@ public class Controle implements Controlador {
         }
         System.out.println();
 
-//Primeira lógica para o mais volume
-//        if (this.isLigado()) {
-//            //Coleta informação
-//            System.out.println("Aumentar o volume em quantas vezes? ");
-//            int numAumentado = entradaDados.nextInt();
-//            //Aumenta a quantidade de vezes que foi informada
-//            for (int i = 0; i < numAumentado; i++) {
-//                this.setVolume(this.getVolume() + 5);
-//            }
-//
-//            if (this.getVolume() > 100) {
-//                this.setVolume(100);
-//            }
-//
-//            //mostra visualmente o valor do volume e graficamente
-//            System.out.print("Volume: " + this.getVolume());
-//            for (int i=0; i <= this.getVolume(); i+=10) {
-//                System.out.print(" |");
-//            }
-//            System.out.println(" ");
-//        }
+
     }
 
     @Override

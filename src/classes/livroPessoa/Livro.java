@@ -51,7 +51,7 @@ public class Livro implements Publicacao {
     @Override
     public void folhear(int numeroPaginas){
         if (this.isAberto()) {
-            this.setPagAtual(this.getPagAtual() + numeroPaginas);
+            this.setPagAtual(this.getPagAtual() + (numeroPaginas));
 
             if (this.getPagAtual() > this.getTotPaginas()) {
                 this.setPagAtual(this.getTotPaginas());

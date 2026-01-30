@@ -19,7 +19,7 @@ como um tipo abstrato de dado:
         - totPaginas : Int
         - pagAtual : int
         - aberto : boolean
-        - leitor : Lutador
+        - leitor : Pessoa
       ----------------------
             + detalhes()
       ----------------------

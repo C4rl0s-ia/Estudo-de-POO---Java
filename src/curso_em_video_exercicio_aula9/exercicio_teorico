@@ -93,9 +93,9 @@ Resposta: C - Correto
 (EAGS 2014 - 7) Quais são os três pilares da Programação Orientada a
 Objetos
 
-A: Herança, Polimorfismo e instância
-B: Herança, Polimorfismo e Metodologia
-C: Encapsulamento, Herança e Polimorfismo
+A: heranca, Polimorfismo e instância
+B: heranca, Polimorfismo e Metodologia
+C: Encapsulamento, heranca e Polimorfismo
 D: Encapsulamento, Polimorfismo e Metodologia
 
 Resposta: C - Correto
@@ -145,7 +145,7 @@ suas interfaces, define o conceito de:
 
 A: Polimorfismo
 B: Encapsulamento
-C: Herança
+C: heranca
 D: Agregação
 
 Resposta: B - Correto
@@ -168,7 +168,7 @@ parte possuí sua implementação de forma autônoma. Com essa
 Característica é possível ocultar os detalhes internos de cada parte
 através de uma interface.
 
-A: Herança
+A: heranca
 B: Hierarquia
 C: Polimorfismo
 D: Encapsulamento
@@ -180,7 +180,7 @@ uma entidade, incluindo apenas seus atributos mais relevantes?
 
 A: Encapsulamento
 B: Polimorfismo
-C: Herança
+C: heranca
 D: Abstração
 
 Resposta: D - Correto

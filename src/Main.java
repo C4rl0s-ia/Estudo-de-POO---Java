@@ -1,16 +1,25 @@
-import java.util.Scanner;
-
-import classes.caneta.teste.TesteCaneta;
-import classes.celular.teste.TesteCelular;
-import classes.contaBanco.teste.TesteContaBanco;
-import classes.estilo.teste.TesteEstilo;
-import classes.livroPessoa.test.TesteLivroPessoa;
-import classes.lutaLutador.test.TesteLutaLutador;
-import classes.song.test.TesteSong;
-import utilidades.*;
+import heranca.projetoPessoas.test.TestProjetoPessoaForms;
+import polimorfismo.sobreposicao.Teste.TesteSobreposicao;
+import utilidades.CoresTerminal;
 
 public class Main {
     public static void main(String[] args) {
+
+        /*
+w
+        //Classes de animais foram criadas para estudar sobreposição (polimorfismo)
+
+        System.out.println(CoresTerminal.AMARELO + "-------------Teste Sobreposição-------------" + CoresTerminal.RESET );
+        TesteSobreposicao testSobr = new TesteSobreposicao();
+        testSobr.TesteSobreposicao();
+
+        //Obejetos Aluno e seus tipos e professor
+        // Criação da classe realizada para estudos de herença
+
+        System.out.println(CoresTerminal.AMARELO + "-------------Teste Escola-------------" + CoresTerminal.RESET );
+
+        TestProjetoPessoaForms test = new TestProjetoPessoaForms();
+        test.TesteProjetoEscolaForms();
 
         //Objetos Pessoa e Livro e a interface Publicacao
         //A criação das classes e interface foram devido ao exercicio proposto no curso em video sobre POO em Java.
@@ -54,7 +63,7 @@ public class Main {
         testeCelular.testarCelular();
 
         //Objeto ContaBanco.
-        //Aqui teve a aplicação dos estudos anteriores e a adição do método construtor
+        //Aqui teve a aplicação dos estudos anteriores e a adição do metodo construtor
         System.out.println();
         System.out.println();
         System.out.println(CoresTerminal.AMARELO + "-------------Teste ContaBanco-------------" + CoresTerminal.RESET);
@@ -84,7 +93,7 @@ public class Main {
         //Estudo de encapsulamento
         //Vamos atuar na criação de uma “interface” controlador, uma classe controle e um objeto.
         //Foi aplicado demais conhecimentos como metodos construtores, getters, setters, abstração, conceitos de classes e demais.
-
+    */
     }
 
 }

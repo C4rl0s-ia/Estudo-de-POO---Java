@@ -11,6 +11,7 @@ public class Livro implements Publicacao {
     private boolean aberto;
     private Pessoa leitor;
 
+    //Construtor
     public Livro(String titulo, String autor, int totPaginas) {
         this.titulo = titulo;
         this.autor = autor;

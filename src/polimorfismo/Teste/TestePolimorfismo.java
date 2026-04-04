@@ -1,10 +1,11 @@
-package polimorfismo.sobreposicao.Teste;
+package polimorfismo.Teste;
 
 // Importando suas classes de domínio
-import polimorfismo.sobreposicao.Mamifero.*;
-import polimorfismo.sobreposicao.Reptil.*;
-import polimorfismo.sobreposicao.Peixe.*;
-import polimorfismo.sobreposicao.Ave.*;
+import polimorfismo.Animal;
+import polimorfismo.Mamifero.*;
+import polimorfismo.Reptil.*;
+import polimorfismo.Peixe.*;
+import polimorfismo.Ave.*;
 // Importando a utilidade de cores
 import utilidades.CoresTerminal;
 
@@ -60,13 +61,43 @@ public class TesteSobreposicao {
         System.out.print(CoresTerminal.ROXO + "Peixe: " + CoresTerminal.CIANO);
         p.soltarBolhas();
 
+        // --- CABEÇALHO 2  ---
+        System.out.println(CoresTerminal.corRGB(0, 255, 255) +
+                "\n==========================================");
+        System.out.println("   TESTE DE POLIMORFISMO (SOBRECARGA)   ");
+        System.out.println("==========================================" + CoresTerminal.RESET);
+
+        System.out.println(CoresTerminal.AMARELO + "\n--- [1] Reagir um  (Classes Cachorro) ---" + CoresTerminal.RESET);
+
+        k.reagir("Oi, amigao");
+        k.reagir("Eae garotão");
+
+        System.out.println(CoresTerminal.AMARELO + "\n--- [1] Reagir dois  (Classes Cachorro) ---" + CoresTerminal.RESET);
+
+        k.reagir(true);
+        k.reagir(false);
+
+        System.out.println(CoresTerminal.AMARELO + "\n--- [1] Reagir três  (Classes Cachorro) ---" + CoresTerminal.RESET);
+
+        k.reagir(8f);
+        k.reagir(15f);
+        k.reagir(20f);
+
+        System.out.println(CoresTerminal.AMARELO + "\n--- [1] Reagir quatro  (Classes Cachorro) ---" + CoresTerminal.RESET);
+
+        k.reagir("novo", "leve");
+        k.reagir("novo", "pesado");
+        k.reagir("idoso", "leve");
+        k.reagir("idoso", "pesado");
+
         // Reset final para garantir que o terminal do usuário não fique colorido depois
         System.out.print(CoresTerminal.RESET);
+
     }
 
     // Criei um método auxiliar para não repetir código e facilitar a formatação
     // Ele recebe qualquer objeto que seja filho de Animal (Polimorfismo puro aqui!)
-    public static void testarLocomocao(String nomeAnimal, polimorfismo.sobreposicao.Animal animal) {
+    public static void testarLocomocao(String nomeAnimal, Animal animal) {
         // Formatação: Nome do bicho em Roxo, Ação em Verde
         System.out.print(CoresTerminal.ROXO + nomeAnimal + ": " + CoresTerminal.VERDE);
         animal.locomover();
